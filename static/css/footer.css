@@ -1,0 +1,27 @@
+.footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background: var(--color-black);
+    display: grid;
+    gap: .5rem;
+    padding: .5rem 1rem;
+   
+}
+.footer>p{
+font-size: .6rem;
+margin: auto;
+}
+.footer-nav{
+   text-align: center;
+   font-size: .8rem;
+}
+.footer-nav ul{
+    line-height: 1.5rem;
+}
+
+.ya-share2{
+    text-align: center;
+    margin: auto;
+}
+

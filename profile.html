@@ -1,0 +1,78 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>currency</title>
+    <link rel="stylesheet" href="static/css/profile.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href=" static/css/index.css">
+    <link rel="stylesheet" href=" static/css/media.css">
+
+</head>
+
+<body>
+    <div class="wrapper-profile">
+        <header class="header-profile">
+            <span><a class="ctw" href="{% url 'index' %}">Главная страница</a></span>
+        </header>
+
+        <main class="main-profile">
+
+            <section class="section-profile">
+                <div class="user-profile">
+                    <h4 class="ctw">usernameusername</h4>
+                    <span>Баланс: 1000₽ </span>
+                </div>
+                <div class="profile-img">
+                    <img src="static/img/default_avatar.jpg" alt="{{request.user.username}}">
+                </div>
+
+                <div class="profile-setting">
+                    <ul>
+                        <li><a class="ctw" href="#">Баланс</a></li>
+                        <li><a class="ctw" href="#">Редактировать профиль</a></li>
+                        <li><a class="ctw" href="#">Изменить Email</a></li>
+                        <li><a class="ctw" href="#">Изменить пароль</a></li>
+                        <li class="logout-btn">
+                            <form method="post" action="{% url 'admin:logout' %}">
+                               
+                                <button  class= "ctb all-btn-1 " type="submit">Выход</button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="my-operations">
+                <h3 class="ctw">Мои операции</h3>
+                <div class="basket">
+                    <span class="ctw">Aion</span>
+                    <img src="" alt="">
+                    <ul>
+                        <li class="ctw">Сервер: MARCUTAN</li>
+                        <li class="ctw">Продавец: kubasik &#11088; 4.5</li>
+                        <li class="ctw"></li>
+                    </ul>
+                <a href="#">Купить</a>
+                </div>
+                <div class="my-lots"></div>
+            </section>
+
+            <section>
+                <h3>История</h3>
+            </section>
+        </main>
+        <footer class="footer-main">
+            <ul class="ctw">
+                <li>Правила</li>
+                <li>Оферта</li>
+                <li>Обратная связь</li>
+            </ul>
+        </footer>
+    </div>
+</body>
+
+</html>

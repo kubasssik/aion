@@ -1,0 +1,155 @@
+.header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+}
+
+.header-nav {
+    width: 100%;
+}
+
+.nav-ul {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    
+}
+
+.header-nav-up {
+    width: 100%;
+    background: linear-gradient(rgb(255, 255, 255), rgb(192, 192, 192));
+    font-size: 1.1rem;
+    padding: 1rem .3rem;
+}
+
+.header-nav-up ul {
+    grid-template-columns: repeat(2, auto) 1fr;
+    gap: .5rem;
+}
+
+.header-nav-up ul li {
+    text-align: center;
+    transition: .3s;
+}
+.quantity-point{
+    color: yellow;
+    text-shadow: 0 0 .1rem black;
+    font-weight: bold;
+}
+.profile {
+    text-align: center;
+    justify-self: end;
+    padding: .1rem;
+    font-size: 1rem;
+    border-radius: var(--border-radius-main);
+    display: none;
+}
+
+
+.header-nav-down {
+ display: none;
+}
+
+.header-nav-down ul {
+    grid-auto-flow: column;
+    background: linear-gradient(rgb(238, 64, 64), red, rgb(238, 64, 64));
+}
+
+.header-nav-down ul li {
+    text-align: center;
+    padding: 1rem .3rem;
+   
+}
+.selected-btn{
+    background: linear-gradient(rgb(158, 158, 158), rgb(0, 0, 0), rgb(158, 158, 158));
+}
+
+/*-BURGER_NENU-*/
+.burger {
+    background: linear-gradient(rgb(238, 64, 64), red, rgb(238, 64, 64));
+    display: grid;
+    grid-auto-flow: column;
+    padding: 0 .3rem;
+   
+}
+.point{
+    justify-self: end;
+    align-self: center;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+    
+}
+
+.hamburger-line {
+    position: relative;
+    height: 4px;
+    width: 34px;
+    background: var(--color-white);
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger-line:nth-child(1) {
+    top: 8px;
+}
+
+.hamburger-line:nth-child(3) {
+    top: -8px;
+}
+
+.offscreen-menu {
+    position: absolute;
+    top: 5.5rem;
+    left: -100%;
+    width: 100%;
+    min-height: 100vh;
+    padding: 2rem;
+    transition: left 0.3s ease-in-out;
+    background: white;
+    box-shadow: .05rem 0 0 0 black;
+    z-index: 99;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.offscreen-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.offscreen-menu li {
+    margin-bottom: 1rem;
+}
+
+.offscreen-menu a {
+    color: black;
+    text-decoration: none;
+}
+
+.offscreen-menu.active {
+    left: 0;
+}
+
+.hamburger.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+}
+
+.off-main {
+    background: rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+}
